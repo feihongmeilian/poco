@@ -31,7 +31,7 @@
 // ActiveRecordLib_API functions as being imported from a DLL, wheras this DLL sees symbols
 // defined with this macro as being exported.
 //
-#if defined(_WIN32) && defined(POCO_DLL)
+#if defined(_WIN32) && defined(_MSC_VER) && defined(POCO_DLL)
 	#if defined(ActiveRecordLib_EXPORTS)
 		#define ActiveRecordLib_API __declspec(dllexport)
 	#else

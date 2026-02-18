@@ -11,7 +11,7 @@
 #include <utility>
 #include <vector>
 
-#ifdef _WIN32
+#ifdef _WIN32 && defined(_MSC_VER)
 #define CPPTRACE_EXPORT_ATTR __declspec(dllexport)
 #define CPPTRACE_IMPORT_ATTR __declspec(dllimport)
 #else

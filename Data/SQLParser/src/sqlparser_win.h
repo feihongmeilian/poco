@@ -15,7 +15,7 @@
 		#define SQLParser_EXPORTS
 	#endif
 #else
-	#if defined(_DLL) || defined(_USRDLL)
+	#if defined(_DLL) || defined(_USRDLL) && defined(_MSC_VER)
 		#if defined(SQLParser_EXPORTS)
 			#define SQLParser_API __declspec(dllexport)
 		#else

@@ -33,7 +33,7 @@
 //
 
 
-#if defined(_WIN32) && defined(POCO_DLL)
+#if defined(_WIN32) && defined(_MSC_VER) && defined(POCO_DLL)
 	#if defined(MongoDB_EXPORTS)
 		#define MongoDB_API __declspec(dllexport)
 	#else
